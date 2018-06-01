@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97495e79-b6a4-4527-ade7-5f29fe9708ef" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/androidTest/res/raw/doscientosp.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/androidTest/res/raw/doscientospd.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/raw/doscientosp.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/raw/doscientospd.jpg" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/inti/recon/ReconActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/inti/recon/ReconActivity.java" />
-    </list>
+    <list default="true" id="97495e79-b6a4-4527-ade7-5f29fe9708ef" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +26,7 @@
       <file leaf-file-name="ReconActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/inti/recon/ReconActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-903">
+            <state relative-caret-position="357">
               <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
               <folding />
             </state>
@@ -3370,7 +3362,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/inti/recon/ReconActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-903">
+        <state relative-caret-position="357">
           <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
           <folding />
         </state>

@@ -1,0 +1,128 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:2:1-53:12
+MERGED from [:openCVLibrary24135] /home/agustin/StudioProjects/Recon-J/openCVLibrary24135/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
+INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:2:1-53:12
+	package
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:3:11-31
+		INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml
+		INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:5:11-36
+		INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml
+		INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:4:11-35
+		INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml
+		INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml
+supports-screens
+ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:7:5-11:51
+	android:largeScreens
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:10:23-50
+	android:smallScreens
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:8:23-50
+	android:normalScreens
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:9:23-51
+	android:resizeable
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:7:23-48
+	android:anyDensity
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:11:23-48
+uses-sdk
+ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:12:5-13:41
+INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:12:5-13:41
+INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:12:5-13:41
+MERGED from [:openCVLibrary24135] /home/agustin/StudioProjects/Recon-J/openCVLibrary24135/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:40
+MERGED from [:openCVLibrary24135] /home/agustin/StudioProjects/Recon-J/openCVLibrary24135/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:40
+INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:12:5-13:41
+INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:12:5-13:41
+	android:targetSdkVersion
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:13:9-38
+		INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml
+		INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:12:15-40
+		INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml
+		INJECTED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.CAMERA
+ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:15:6-65
+	android:name
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:15:23-63
+uses-permission#android.permission.FLASHLIGHT
+ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:16:6-69
+	android:name
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:16:23-67
+uses-feature#android.hardware.camera
+ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:17:6-85
+	android:required
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:17:59-83
+	android:name
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:17:20-58
+uses-feature#android.hardware.camera.flash
+ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:18:6-92
+	android:required
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:18:65-89
+	android:name
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:18:20-64
+uses-feature#android.hardware.camera.autofocus
+ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:19:6-95
+	android:required
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:19:69-93
+	android:name
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:19:20-68
+uses-feature#android.hardware.camera.front
+ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:20:5-90
+	android:required
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:20:64-88
+	android:name
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:20:19-63
+uses-feature#android.hardware.camera.front.autofocus
+ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:21:5-100
+	android:required
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:21:74-98
+	android:name
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:21:19-73
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:23:5-81
+	android:name
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:23:22-78
+uses-permission#android.hardware.camera.flash
+ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:24:5-68
+	android:name
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:24:22-66
+application
+ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:28:5-46:23
+	android:label
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:30:9-41
+	android:icon
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:31:9-38
+	android:allowBackup
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:29:9-35
+	android:theme
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:32:9-67
+activity#inti.recon.ReconActivity
+ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:36:9-44:20
+	android:screenOrientation
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:38:19-56
+	android:label
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:37:19-51
+	android:configChanges
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:39:19-69
+	android:name
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:36:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:40:13-43:29
+action#android.intent.action.MAIN
+ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:41:17-69
+	android:name
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:41:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:42:17-77
+	android:name
+		ADDED from /home/agustin/StudioProjects/Recon-J/app/src/main/AndroidManifest.xml:42:27-74

@@ -23,10 +23,8 @@ public class SimpleBillSearch implements BillSearch {
 
     @Override
     public String search(Billete needle, List<Billete> haystack) {
-        Thread buscadorDorso = new Thread(new ReconocedorDorso(needle, haystack, this.billeteEncontrado, this.reultado));
-        Thread buscadorFrente = new Thread(new ReconocedorFrente(needle, haystack, this.billeteEncontrado, this.reultado));
-        threadPoolExecutor.execute(buscadorDorso);
-        threadPoolExecutor.execute(buscadorFrente);
+        threadPoolExecutor.execute(new ReconocedorDorso(needle, haystack, this.billeteEncontrado, this.reultado));
+        threadPoolExecutor.execute(new ReconocedorFrente(needle, haystack, this.billeteEncontrado, this.reultado));
         threadPoolExecutor.shutdown();
         try {
             threadPoolExecutor.awaitTermination(SEARCH_TIMEOUT, TimeUnit.SECONDS);

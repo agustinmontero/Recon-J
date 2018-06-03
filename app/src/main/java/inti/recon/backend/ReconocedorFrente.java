@@ -62,9 +62,10 @@ class ReconocedorFrente implements Runnable {
 
             for (int j = 0; j < haystack.size(); j++) {
                 if(this.billeteEncontrado.get()){break;}
+                Billete billeteActual = haystack.get(j);
 
                 matches = new ArrayList<MatOfDMatch>();
-                matcher.knnMatch(haystack.get(j).getDFrente(), needle.getDFrente(), matches, 2);
+                matcher.knnMatch(billeteActual.getDFrente(), needle.getDFrente(), matches, 2);
 
                 good_matches = new ArrayList<DMatch>();
                 for (int i = 0; i < matches.size(); i++) {
@@ -79,7 +80,7 @@ class ReconocedorFrente implements Runnable {
                 Mat outImg = new Mat();
                 String fileName;
                 if (good_matches.size() > Ngoodmatches) {
-                    keypoints_objectList = haystack.get(j).getKFrente().toList();
+                    keypoints_objectList = billeteActual.getKFrente().toList();
                     keypoints_sceneList = needle.getKFrente().toList();
 
                     objList = new LinkedList<Point>();
@@ -97,18 +98,18 @@ class ReconocedorFrente implements Runnable {
 
                     obj_corners = new Mat(4, 1, CvType.CV_32FC2);
                     obj_corners.put(0, 0, 0, 0);
-                    obj_corners.put(1, 0, haystack.get(j).getFrente().cols(), 0);
-                    obj_corners.put(2, 0, haystack.get(j).getFrente().cols(), haystack.get(j).getFrente().rows());
-                    obj_corners.put(3, 0, 0, haystack.get(j).getFrente().rows());
+                    obj_corners.put(1, 0, billeteActual.getFrente().cols(), 0);
+                    obj_corners.put(2, 0, billeteActual.getFrente().cols(), billeteActual.getFrente().rows());
+                    obj_corners.put(3, 0, 0, billeteActual.getFrente().rows());
 
                     scene_corners = new Mat(4, 1, CvType.CV_32FC2);
                     Core.perspectiveTransform(obj_corners, scene_corners, hg);
 
 
-                    scene_corners.put(0, 0, scene_corners.get(0, 0)[0] + haystack.get(j).getFrente().cols(), scene_corners.get(0, 0)[1]);
-                    scene_corners.put(1, 0, scene_corners.get(1, 0)[0] + haystack.get(j).getFrente().cols(), scene_corners.get(1, 0)[1]);
-                    scene_corners.put(2, 0, scene_corners.get(2, 0)[0] + haystack.get(j).getFrente().cols(), scene_corners.get(2, 0)[1]);
-                    scene_corners.put(3, 0, scene_corners.get(3, 0)[0] + haystack.get(j).getFrente().cols(), scene_corners.get(3, 0)[1]);
+                    scene_corners.put(0, 0, scene_corners.get(0, 0)[0] + billeteActual.getFrente().cols(), scene_corners.get(0, 0)[1]);
+                    scene_corners.put(1, 0, scene_corners.get(1, 0)[0] + billeteActual.getFrente().cols(), scene_corners.get(1, 0)[1]);
+                    scene_corners.put(2, 0, scene_corners.get(2, 0)[0] + billeteActual.getFrente().cols(), scene_corners.get(2, 0)[1]);
+                    scene_corners.put(3, 0, scene_corners.get(3, 0)[0] + billeteActual.getFrente().cols(), scene_corners.get(3, 0)[1]);
 
 
                     Point punto_A = new Point(scene_corners.get(0, 0));
@@ -118,7 +119,7 @@ class ReconocedorFrente implements Runnable {
 
                     if(Debug){
                         MatOfByte drawnMatches = new MatOfByte();
-                        Features2d.drawMatches(haystack.get(j).getFrente(), haystack.get(j).getKFrente(), needle.getFrente(), needle.getKFrente(), goodMatches, outImg, Scalar.all(-1), Scalar.all(-1), drawnMatches, Features2d.NOT_DRAW_SINGLE_POINTS);
+                        Features2d.drawMatches(billeteActual.getFrente(), billeteActual.getKFrente(), needle.getFrente(), needle.getKFrente(), goodMatches, outImg, Scalar.all(-1), Scalar.all(-1), drawnMatches, Features2d.NOT_DRAW_SINGLE_POINTS);
                         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
                         String currentDateandTime = sdf.format(new Date());
                         fileName = good_matches.size() + "_" + currentDateandTime + ".png";

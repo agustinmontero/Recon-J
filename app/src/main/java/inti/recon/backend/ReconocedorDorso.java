@@ -40,7 +40,7 @@ class ReconocedorDorso implements Runnable {
         this.resultado = resultado;
     }
 
-    @SuppressLint("SimpleDateFormat")
+    @SuppressLint({"SimpleDateFormat", "LongLogTag"})
     @Override
     public void run() {
         Log.d("Frente", "billetes:" + haystack.size());
@@ -62,9 +62,10 @@ class ReconocedorDorso implements Runnable {
 
             for (int j = 0; j < haystack.size(); j++) {
                 if(this.billeteEncontrado.get()){break;}
+                Billete billeteActual = haystack.get(j);
 
                 matches = new ArrayList<MatOfDMatch>();
-                matcher.knnMatch(haystack.get(j).getDDorso(), needle.getDDorso(), matches, 2);
+                matcher.knnMatch(billeteActual.getDDorso(), needle.getDDorso(), matches, 2);
 
                 good_matches = new ArrayList<DMatch>();
                 for (int i = 0; i < matches.size(); i++) {
@@ -80,7 +81,7 @@ class ReconocedorDorso implements Runnable {
                 String fileName;
 
                 if (good_matches.size() > Ngoodmatches) {
-                    keypoints_objectList = haystack.get(j).getKDorso().toList();
+                    keypoints_objectList = billeteActual.getKDorso().toList();
                     keypoints_sceneList = needle.getKFrente().toList();
 
                     objList = new LinkedList<Point>();
@@ -98,18 +99,18 @@ class ReconocedorDorso implements Runnable {
 
                     obj_corners = new Mat(4, 1, CvType.CV_32FC2);
                     obj_corners.put(0, 0, 0, 0);
-                    obj_corners.put(1, 0, haystack.get(j).getDorso().cols(), 0);
-                    obj_corners.put(2, 0, haystack.get(j).getDorso().cols(), haystack.get(j).getDorso().rows());
-                    obj_corners.put(3, 0, 0, haystack.get(j).getDorso().rows());
+                    obj_corners.put(1, 0, billeteActual.getDorso().cols(), 0);
+                    obj_corners.put(2, 0, billeteActual.getDorso().cols(), billeteActual.getDorso().rows());
+                    obj_corners.put(3, 0, 0, billeteActual.getDorso().rows());
 
                     scene_corners = new Mat(4, 1, CvType.CV_32FC2);
                     Core.perspectiveTransform(obj_corners, scene_corners, hg);
 
 
-                    scene_corners.put(0, 0, scene_corners.get(0, 0)[0] + haystack.get(j).getDorso().cols(), scene_corners.get(0, 0)[1]);
-                    scene_corners.put(1, 0, scene_corners.get(1, 0)[0] + haystack.get(j).getDorso().cols(), scene_corners.get(1, 0)[1]);
-                    scene_corners.put(2, 0, scene_corners.get(2, 0)[0] + haystack.get(j).getDorso().cols(), scene_corners.get(2, 0)[1]);
-                    scene_corners.put(3, 0, scene_corners.get(3, 0)[0] + haystack.get(j).getDorso().cols(), scene_corners.get(3, 0)[1]);
+                    scene_corners.put(0, 0, scene_corners.get(0, 0)[0] + billeteActual.getDorso().cols(), scene_corners.get(0, 0)[1]);
+                    scene_corners.put(1, 0, scene_corners.get(1, 0)[0] + billeteActual.getDorso().cols(), scene_corners.get(1, 0)[1]);
+                    scene_corners.put(2, 0, scene_corners.get(2, 0)[0] + billeteActual.getDorso().cols(), scene_corners.get(2, 0)[1]);
+                    scene_corners.put(3, 0, scene_corners.get(3, 0)[0] + billeteActual.getDorso().cols(), scene_corners.get(3, 0)[1]);
 
 
                     Point punto_A = new Point(scene_corners.get(0, 0));
@@ -119,7 +120,7 @@ class ReconocedorDorso implements Runnable {
 
                     if(Debug){
                         MatOfByte drawnMatches = new MatOfByte();
-                        Features2d.drawMatches(haystack.get(j).getFrente(), haystack.get(j).getKFrente(), needle.getFrente(), needle.getKFrente(), goodMatches, outImg, Scalar.all(-1), Scalar.all(-1), drawnMatches, Features2d.NOT_DRAW_SINGLE_POINTS);
+                        Features2d.drawMatches(billeteActual.getFrente(), billeteActual.getKFrente(), needle.getFrente(), needle.getKFrente(), goodMatches, outImg, Scalar.all(-1), Scalar.all(-1), drawnMatches, Features2d.NOT_DRAW_SINGLE_POINTS);
                         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
                         String currentDateandTime = sdf.format(new Date());
                         fileName = good_matches.size() + "_" + currentDateandTime + ".png";
@@ -154,6 +155,7 @@ class ReconocedorDorso implements Runnable {
                         // Log.d("Billete OK", String.format("distancia_AB > %.1f && distancia_AC > %.1f && distancia_AD > %.1f", distancia_AB, distancia_AC, distancia_AD));
                         this.resultado.set(j + " ");
                         this.billeteEncontrado.set(true);
+                        Log.d("Direccion billete encontrado", String.format("%d", billeteActual.getDDorso().getNativeObjAddr()));
                         break;
                     }
                 }
